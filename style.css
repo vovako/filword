@@ -1,0 +1,75 @@
+body{
+	background-color: rgb(255, 244, 244);
+}
+.non-guessed-count{
+	text-align: center;
+	font-size: 30px;
+}
+.wrapper{
+	display: flex;
+	justify-content: center;
+}
+
+.fill__grid{
+	display: grid;
+	width: max-content;
+	height: max-content;
+	margin-right: 30px;
+}
+.fill__char{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 34px;
+	width: 50px;
+	height: 50px;
+	color: white;
+	background-color: rgb(1, 168, 1);
+	border: green 2px solid;
+	user-select: none;
+}
+.fill__char._active{
+	border: rgb(255, 0, 200) 2px solid;
+}
+.fill__char._disabled{
+	background-color: rgb(157, 224, 157);
+}
+.teams {
+	display: flex;
+	flex-direction: column;
+}
+
+.team {
+	padding: 4px;
+	width: 300px;
+	background-color: rgb(194, 47, 47);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 4px;
+	border: 5px transparent solid;
+	color: white;
+}
+.team._selected{
+	border: 5px rgb(255, 2, 158) solid;
+	box-shadow: 0 0 20px 0 rgb(255, 2, 158);
+}
+.team._selected .skip-btn{
+	display: block;
+}
+.team:nth-child(2){
+	background-color: rgb(59, 59, 255);
+}
+.team:nth-child(3){
+	background-color: rgb(18, 138, 18);
+}
+.team:nth-child(4){
+	background-color: rgb(143, 32, 143);
+}
+.team-score{
+	font-size: 26px;
+}
+.skip-btn{
+	display: none;
+	font-size: 20px;
+}
