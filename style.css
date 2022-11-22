@@ -9,6 +9,53 @@ body{
 	display: flex;
 	justify-content: center;
 }
+.fill__input{
+	font-size: 18px;
+}
+.fill__textarea{
+	resize: vertical;
+	min-height: 250px;
+	font-size: 20px;
+}
+.fill__settings{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	
+}
+.fill__settings-create-btn{
+	font-size: 20px;
+}
+.fill__settings-save-btn{
+	font-size: 20px;
+	display: none;
+}
+.fill__settings-save-btn._active{
+	display: block;
+}
+.fill__settings-panel{
+	border: gray 1px solid;
+	padding: 10px;
+	transform: translateY(-100%);
+	opacity: 0;
+	visibility: collapse;
+	transition: all .3s;
+	display: flex;
+	flex-direction: column;
+	pointer-events: none;
+	height: 0;
+	background-color: rgb(247, 255, 250);
+}
+.fill__settings-panel *:not(:last-child){
+	margin-bottom: 10px;
+}
+.fill__settings._active .fill__settings-panel{
+	visibility: visible;
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: all;
+	height: auto;
+}
 
 .fill__grid{
 	display: grid;
@@ -27,6 +74,11 @@ body{
 	background-color: rgb(1, 168, 1);
 	border: green 2px solid;
 	user-select: none;
+}
+.fill__char input{
+	width: 50%;
+	font-size: 18px;
+	text-align: center;
 }
 .fill__char._active{
 	border: rgb(255, 0, 200) 2px solid;
